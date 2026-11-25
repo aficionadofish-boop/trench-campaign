@@ -253,6 +253,24 @@
   function stat(k, v) { return '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + "</div></div>"; }
   function showWarband(id) { currentWb = id; renderTabs(); renderPanel(); openWin("warbands"); }
 
+  /* ---------- render: schedule ---------- */
+  var FIELD = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22];
+  function scenarioTable(n) { return n <= 3 ? "Early (1–3)" : n <= 8 ? "Mid (4–8)" : n <= 11 ? "Endgame (9–11)" : "Final Battle: The Great War"; }
+  function exploreDice(n) { return n <= 2 ? 3 : n <= 5 ? 4 : n <= 9 ? 5 : 6; }
+  function exploreTable(n) { return n <= 2 ? "Common" : n <= 5 ? "Common or Rare" : n <= 9 ? "Rare" : "Rare or Legendary"; }
+  function renderSchedule() {
+    var base = D.thresholdBase || 700, step = D.thresholdStep || 100;
+    var maxPlayed = Math.max.apply(null, STATS.map(function (s) { return s.games.length; }).concat([0]));
+    var next = maxPlayed + 1, rows = "";
+    for (var n = 1; n <= 12; n++) {
+      rows += "<tr" + (n === next ? ' class="sel"' : "") + '><td class="num">' + n + (n === next ? " (next)" : "") +
+        '</td><td class="num">' + (base + step * (n - 1)) + '</td><td class="num">' + FIELD[n - 1] +
+        "</td><td>" + scenarioTable(n) + '</td><td class="num">' + exploreDice(n) + "</td><td>" + exploreTable(n) + "</td></tr>";
+    }
+    $("#schedule-body").innerHTML = rows;
+    $("#schedule-status").textContent = next <= 12 ? "Next game: " + next + " (Threshold " + (base + step * (next - 1)) + ")" : "Campaign complete";
+  }
+
   /* ---------- window manager ---------- */
   var z = 10;
   var titles = {};
@@ -367,6 +385,7 @@
   renderLog();
   renderTabs();
   renderPanel();
+  renderSchedule();
   $all(".window").forEach(function (w) {
     var id = w.dataset.win;
     state[id] = w.hidden ? "closed" : "open";
@@ -376,4 +395,7 @@
   if (window.innerWidth > 720 && st && lg) lg.style.top = (st.offsetTop + st.offsetHeight + 16) + "px";
   drawTasks();
   focusWin("standings");
+  // direct links: index.html#schedule, #warbands, #log, #rules
+  var h = location.hash.slice(1);
+  if (h && winEl(h)) openWin(h);
 })();

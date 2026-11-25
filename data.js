@@ -15,6 +15,8 @@ window.CAMPAIGN = {
   started: "2026-11-24",
   gamesPerPlayer: 12,
   thresholdNote: "Threshold: game N = 800 + 100 x (N - 1)",
+  thresholdBase: 800,       // Threshold for game 1 (book is 700; agreed +100)
+  thresholdStep: 100,
 
   warbands: [
     {

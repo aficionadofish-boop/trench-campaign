@@ -270,6 +270,9 @@ legend { color: #0046d5; padding: 0 3px; }
 .kv dt { color: var(--muted); }
 .kv dd { margin: 0; }
 
+.notes { margin: 10px 0 0; padding-left: 18px; color: #333; user-select: text; }
+.notes li { margin-bottom: 2px; }
+
 /* Dialog */
 .dialog { display: flex; gap: 12px; align-items: flex-start; }
 .dialog-icon { width: 32px; height: 32px; flex: none; }
