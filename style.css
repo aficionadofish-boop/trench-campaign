@@ -30,14 +30,19 @@ body {
 #desktop {
   position: fixed;
   inset: 0 0 30px 0;
+  /* Photo: "Green and Blue Landscape, Henley-on-Thames" by Scott Wylie, CC BY 2.0 (resized). Gradient is the fallback. */
   background:
-    radial-gradient(ellipse 120% 45% at 30% 100%, #4f9a2c 0 60%, transparent 61%),
-    radial-gradient(ellipse 90% 40% at 85% 105%, #5fae35 0 60%, transparent 61%),
-    radial-gradient(ellipse 30% 12% at 20% 22%, rgba(255,255,255,.85), transparent 70%),
-    radial-gradient(ellipse 25% 9% at 70% 15%, rgba(255,255,255,.7), transparent 70%),
-    linear-gradient(#245bd4 0%, #5c97ec 45%, #a7cbf5 70%, #cfe3f8 100%);
+    url("bg.jpg") center 35% / cover no-repeat,
+    linear-gradient(#245bd4 0%, #5c97ec 55%, #4f9a2c 56%, #3f8a22 100%);
   overflow: hidden;
 }
+.credit {
+  position: absolute; right: 8px; bottom: 6px;
+  font-size: 10px; color: rgba(255,255,255,.9);
+  text-shadow: 1px 1px 2px #000;
+  user-select: text;
+}
+.credit a { color: inherit; }
 
 /* Desktop icons */
 .icons {
@@ -362,6 +367,7 @@ body.muted-sound #tray-waves { display: none; }
     width: auto !important; max-width: none; margin: 0 0 14px;
   }
   .titlebar { cursor: default; }
+  .credit { position: static; display: block; text-align: center; margin-top: 8px; }
   .task { width: 90px; flex-basis: 90px; }
   td, th { padding: 3px 4px; }
 }
