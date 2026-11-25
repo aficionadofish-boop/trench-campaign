@@ -35,7 +35,7 @@ window.CAMPAIGN = {
       variant: "Eire Rangers",
       patron: null,
       color: "#2e7d32",
-      strongbox: null,
+      strongbox: 0,          // called for Reinforcements after game 2
       glory: null
     },
     {
@@ -84,7 +84,7 @@ window.CAMPAIGN = {
       vp: { fim: 29, eire: 17 },
       glory: { fim: 2, eire: 1 },
       xp: { fim: 8, eire: null },
-      ducats: { fim: 176, eire: null },
+      ducats: { fim: 176, eire: 0 },   // eire skipped Exploration (Reinforcements)
       note: "All three Witch Knights fell; Billy's Inferno carried."
     }
   ]
