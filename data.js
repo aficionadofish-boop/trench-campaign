@@ -27,7 +27,7 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 197,
+      strongbox: 182,
       glory: 7
     },
     {
