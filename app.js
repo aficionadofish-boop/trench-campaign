@@ -158,7 +158,7 @@
         '<td class="num">' + s.w + "-" + s.l + "-" + s.d + "</td>" +
         '<td class="num"><strong>' + s.cvp + "</strong></td>" +
         '<td class="num">' + fmtSum(s.glory) + "</td>" +
-        '<td class="num">' + fmtSum(s.xp) + "</td>" +
+        '<td class="num">' + xpText(w, s) + "</td>" +
         '<td class="num">' + fmtSum(s.ducats, " d") + "</td>" +
         "</tr>";
     }).join("") || '<tr><td colspan="7" class="empty">No warbands yet.</td></tr>';
@@ -238,7 +238,7 @@
         stat("Campaign VP", s.cvp) +
         stat("Record", s.w + "-" + s.l + "-" + s.d) +
         stat("Glory earned", fmtSum(s.glory)) +
-        stat("XP earned", fmtSum(s.xp)) +
+        stat("XP", xpText(w, s)) +
         stat("Ducats earned", fmtSum(s.ducats)) +
         stat("Strongbox now", w.strongbox == null ? "?" : w.strongbox) +
         stat("Glory now", w.glory == null ? "?" : w.glory) +
@@ -246,6 +246,7 @@
       '<fieldset><legend>Head to head</legend><div class="listview"><table><thead><tr><th>Opponent</th><th class="num">W</th><th class="num">L</th><th class="num">D</th><th class="num">VP</th></tr></thead><tbody>' +
         h2h + "</tbody></table></div></fieldset>";
   }
+  function xpText(w, s) { return (s.xp.missing && w.xpNow != null) ? String(w.xpNow) : fmtSum(s.xp); }
   function stat(k, v) { return '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + "</div></div>"; }
   function showWarband(id) { currentWb = id; renderTabs(); renderPanel(); openWin("warbands"); }
 

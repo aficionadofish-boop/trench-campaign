@@ -4,6 +4,7 @@
 //   glory   = Glory earned that game (deeds, Glory Hound, etc.)
 //   xp      = total Experience Points gained by the warband's models that game
 //   ducats  = ducats earned that game (exploration loot, 30 Pieces of Silver, sales...)
+//   (warband xpNow: current roster XP, shown when the per-game XP isn't known)
 //   cvpBonus (optional) = extra Campaign VP (Treasure of the Holies, Patron's Visit)
 // Use null when a number is not known yet. winner: warband id, or "draw".
 // A warband with name: null is shown by its player's name until it has one.
@@ -33,7 +34,8 @@ window.CAMPAIGN = {
       player: "Espiovv",
       faction: "New Antioch",
       variant: "Eire Rangers",
-      patron: null,
+      patron: "Learned Saint",
+      xpNow: 9,              // XP on his roster after game 2 (per-game split unknown)
       color: "#2e7d32",
       strongbox: 0,          // called for Reinforcements after game 2
       glory: null
@@ -72,7 +74,7 @@ window.CAMPAIGN = {
       vp: { fim: 18, eire: 3 },
       glory: { fim: 2, eire: 1 },
       xp: { fim: 7, eire: null },
-      ducats: { fim: 200, eire: null },
+      ducats: { fim: 200, eire: 110 },
       note: "Surrendered after turn 2."
     },
     {
