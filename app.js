@@ -142,10 +142,13 @@
   function renderStandings() {
     $("#campaign-name").textContent = D.name;
     $("#campaign-sub").textContent = D.warbands.length + " players · started " + fmtDate(D.started).replace(/<[^>]+>/g, "");
-    var maxPlayed = Math.max.apply(null, STATS.map(function (s) { return s.games.length; }).concat([0]));
+    // The campaign ends when every player has played all their games (11 + the final Great War game).
     var per = D.gamesPerPlayer || 12;
-    $("#progress-label").textContent = "Campaign progress: " + maxPlayed + " of " + per + " games";
-    requestAnimationFrame(function () { $("#progress-fill").style.width = Math.min(100, (maxPlayed / per) * 100) + "%"; });
+    var needed = Math.ceil(D.warbands.length * per / 2);
+    var playerGames = STATS.reduce(function (t, s) { return t + Math.min(s.games.length, per); }, 0);
+    var share = D.warbands.length ? playerGames / (D.warbands.length * per) : 0;
+    $("#progress-label").textContent = "Campaign progress: " + D.games.length + " of " + needed + " games (" + per + " per player)";
+    requestAnimationFrame(function () { $("#progress-fill").style.width = Math.min(100, share * 100) + "%"; });
 
     var rows = STATS.slice().sort(function (a, b) { return b.cvp - a.cvp || b.w - a.w; });
     var rank = 0, lastCvp = null;
@@ -155,13 +158,14 @@
       return '<tr data-wb="' + esc(s.id) + '">' +
         "<td>" + rank + "</td>" +
         "<td>" + swatch(w) + "<strong>" + esc(nm(w)) + "</strong><br><span class=\"muted\">" + (w.name ? esc(w.player || "") + (w.variant ? " · " + esc(w.variant) : "") : "warband not chosen yet") + "</span></td>" +
+        '<td class="num">' + s.games.length + "/" + (D.gamesPerPlayer || 12) + "</td>" +
         '<td class="num">' + s.w + "-" + s.l + "-" + s.d + "</td>" +
         '<td class="num"><strong>' + s.cvp + "</strong></td>" +
         '<td class="num">' + fmtSum(s.glory) + "</td>" +
         '<td class="num">' + xpText(w, s) + "</td>" +
         '<td class="num">' + fmtSum(s.ducats, " d") + "</td>" +
         "</tr>";
-    }).join("") || '<tr><td colspan="7" class="empty">No warbands yet.</td></tr>';
+    }).join("") || '<tr><td colspan="8" class="empty">No warbands yet.</td></tr>';
 
     $("#status-left").textContent = D.games.length + " battle" + (D.games.length === 1 ? "" : "s") + " fought";
     $all("#standings-body tr[data-wb]").forEach(function (tr) {
