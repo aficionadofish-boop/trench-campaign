@@ -213,6 +213,7 @@ th:hover { border-bottom-color: #f9a900; }
 td { padding: 3px 6px; white-space: nowrap; }
 tbody tr:hover { background: #e8f0fb; }
 tbody tr.sel, tbody tr.sel:hover { background: var(--focus-blue); color: #fff; }
+td.wb { white-space: normal; min-width: 200px; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .swatch {
   display: inline-block; width: 10px; height: 10px; margin-right: 6px;

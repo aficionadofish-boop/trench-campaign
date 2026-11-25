@@ -75,7 +75,6 @@ window.CAMPAIGN = {
       glory: { fim: 2, eire: 1 },
       xp: { fim: 7, eire: null },
       ducats: { fim: 200, eire: 110 },
-      note: "Surrendered after turn 2."
     },
     {
       n: 2,
@@ -87,7 +86,6 @@ window.CAMPAIGN = {
       glory: { fim: 2, eire: 1 },
       xp: { fim: 8, eire: null },
       ducats: { fim: 176, eire: 0 },   // eire skipped Exploration (Reinforcements)
-      note: "All three Witch Knights fell; Billy's Inferno carried."
     }
   ]
 };

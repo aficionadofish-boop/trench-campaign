@@ -157,7 +157,7 @@
       var w = byId[s.id];
       return '<tr data-wb="' + esc(s.id) + '">' +
         "<td>" + rank + "</td>" +
-        "<td>" + swatch(w) + "<strong>" + esc(nm(w)) + "</strong><br><span class=\"muted\">" + (w.name ? esc(w.player || "") + (w.variant ? " · " + esc(w.variant) : "") : "warband not chosen yet") + "</span></td>" +
+        "<td class=\"wb\">" + swatch(w) + "<strong>" + esc(nm(w)) + "</strong><br><span class=\"muted\">" + (w.name ? esc(w.player || "") + (w.faction ? " · " + esc(w.faction) : "") + (w.variant ? " · " + esc(w.variant) : "") : "warband not chosen yet") + "</span></td>" +
         '<td class="num">' + s.games.length + "/" + (D.gamesPerPlayer || 12) + "</td>" +
         '<td class="num">' + s.w + "-" + s.l + "-" + s.d + "</td>" +
         '<td class="num"><strong>' + s.cvp + "</strong></td>" +
@@ -204,11 +204,10 @@
         res = '<span class="res-win">' + esc(nm(byId[g.winner])) + "</span>";
       }
       var vp = g.vp ? g.players.map(function (p) { return g.vp[p] == null ? "?" : g.vp[p]; }).join("-") : "";
-      return '<tr title="' + esc(g.note || "") + '"><td>' + g.n + "</td><td>" + fmtDate(g.date) + "</td><td>" + esc(g.scenario) +
+      return "<tr><td>" + g.n + "</td><td>" + fmtDate(g.date) + "</td><td>" + esc(g.scenario) +
         "</td><td>" + names + "</td><td>" + res + '</td><td class="num">' + vp + "</td></tr>";
     }).join("") || '<tr><td colspan="6" class="empty">No battles yet.</td></tr>';
     $("#log-status").textContent = games.length + " of " + D.games.length + " battles shown";
-    $("#log-note").textContent = "Hover a row to see its note.";
     $all("#log-body tr").forEach(function (tr) { tr.addEventListener("click", function () { selectRow(tr); }); });
   }
 
