@@ -39,8 +39,8 @@ window.CAMPAIGN = {
       patron: "Learned Saint",
       xpNow: 9,              // XP on his roster after game 2 (per-game split unknown)
       color: "#2e7d32",
-      strongbox: 0,          // called for Reinforcements after game 2
-      glory: null
+      strongbox: 0,          // called for Reinforcements after games 2 and 3
+      glory: 7               // 8 start - 4 Mamluk Faris - 4 Knighthood, + games (deeds + Knighthood)
     },
     {
       id: "akuu20",
@@ -74,7 +74,7 @@ window.CAMPAIGN = {
       players: ["fim", "eire"],
       winner: "fim",
       vp: { fim: 18, eire: 3 },
-      glory: { fim: 2, eire: 1 },
+      glory: { fim: 2, eire: 2 },   // eire: Hold Your Ground + Knighthood (Lieutenant on the table)
       xp: { fim: 7, eire: null },
       ducats: { fim: 180, eire: 110 },   // fim: old 30 Pieces of Silver (20) removed
     },
@@ -85,7 +85,7 @@ window.CAMPAIGN = {
       players: ["fim", "eire"],
       winner: "fim",
       vp: { fim: 29, eire: 17 },
-      glory: { fim: 2, eire: 1 },
+      glory: { fim: 2, eire: 2 },   // eire: High Risk, High Reward + Knighthood (Lieutenant survived)
       xp: { fim: 8, eire: null },
       ducats: { fim: 160, eire: 0 },   // fim: old 30 Pieces of Silver (16) removed; eire skipped Exploration (Reinforcements)
     },
@@ -96,9 +96,9 @@ window.CAMPAIGN = {
       players: ["fim", "eire"],
       winner: "fim",
       vp: { fim: 19, eire: 6 },
-      glory: { fim: 3, eire: 3 },
+      glory: { fim: 3, eire: 3 },   // eire: 3 deeds; no Knighthood Glory (Lieutenant taken Out of Action)
       xp: { fim: 7, eire: null },
-      ducats: { fim: 160, eire: null },   // fim: Exploration 16 (Black Market)
+      ducats: { fim: 160, eire: 0 },   // fim: Exploration 16 (Black Market); eire skipped Exploration (Reinforcements)
     }
   ]
 };
