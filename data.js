@@ -27,7 +27,7 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 296,
+      strongbox: 276,   // after paying game 4 treatments (20) in advance
       glory: 0
     },
     {
