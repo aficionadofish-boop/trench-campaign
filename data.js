@@ -27,8 +27,8 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 146,
-      glory: 7
+      strongbox: 296,
+      glory: 10
     },
     {
       id: "eire",
@@ -88,6 +88,17 @@ window.CAMPAIGN = {
       glory: { fim: 2, eire: 1 },
       xp: { fim: 8, eire: null },
       ducats: { fim: 160, eire: 0 },   // fim: old 30 Pieces of Silver (16) removed; eire skipped Exploration (Reinforcements)
+    },
+    {
+      n: 3,
+      date: "2026-11-26",
+      scenario: "Supply Raid",
+      players: ["fim", "eire"],
+      winner: "fim",
+      vp: { fim: 18, eire: 6 },
+      glory: { fim: 3, eire: 3 },
+      xp: { fim: 7, eire: null },
+      ducats: { fim: 160, eire: null },   // fim: Exploration 16 (Black Market)
     }
   ]
 };
