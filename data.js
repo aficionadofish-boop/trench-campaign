@@ -95,7 +95,7 @@ window.CAMPAIGN = {
       scenario: "Supply Raid",
       players: ["fim", "eire"],
       winner: "fim",
-      vp: { fim: 18, eire: 6 },
+      vp: { fim: 19, eire: 6 },
       glory: { fim: 3, eire: 3 },
       xp: { fim: 7, eire: null },
       ducats: { fim: 160, eire: null },   // fim: Exploration 16 (Black Market)
