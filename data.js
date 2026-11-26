@@ -28,7 +28,7 @@ window.CAMPAIGN = {
       patron: "Infernal Noble",
       color: "#9b2d6f",
       strongbox: 296,
-      glory: 10
+      glory: 0
     },
     {
       id: "eire",
