@@ -40,7 +40,7 @@ window.CAMPAIGN = {
       xpNow: 9,              // XP on his roster after game 2 (per-game split unknown)
       color: "#2e7d32",
       strongbox: 0,          // called for Reinforcements after games 2 and 3
-      glory: 7               // 8 start - 4 Mamluk Faris - 4 Knighthood, + games (deeds + Knighthood)
+      glory: 6               // 8 start - 4 Mamluk Faris - 4 Knighthood (bought after game 1), + games (deeds + Knighthood)
     },
     {
       id: "akuu20",
@@ -74,7 +74,7 @@ window.CAMPAIGN = {
       players: ["fim", "eire"],
       winner: "fim",
       vp: { fim: 18, eire: 3 },
-      glory: { fim: 2, eire: 2 },   // eire: Hold Your Ground + Knighthood (Lieutenant on the table)
+      glory: { fim: 2, eire: 1 },   // eire: Hold Your Ground (no Knighthood yet)
       xp: { fim: 7, eire: null },
       ducats: { fim: 180, eire: 110 },   // fim: old 30 Pieces of Silver (20) removed
     },
