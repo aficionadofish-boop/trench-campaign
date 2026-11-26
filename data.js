@@ -27,7 +27,7 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 182,
+      strongbox: 146,
       glory: 7
     },
     {
@@ -76,7 +76,7 @@ window.CAMPAIGN = {
       vp: { fim: 18, eire: 3 },
       glory: { fim: 2, eire: 1 },
       xp: { fim: 7, eire: null },
-      ducats: { fim: 200, eire: 110 },
+      ducats: { fim: 180, eire: 110 },   // fim: old 30 Pieces of Silver (20) removed
     },
     {
       n: 2,
@@ -87,7 +87,7 @@ window.CAMPAIGN = {
       vp: { fim: 29, eire: 17 },
       glory: { fim: 2, eire: 1 },
       xp: { fim: 8, eire: null },
-      ducats: { fim: 176, eire: 0 },   // eire skipped Exploration (Reinforcements)
+      ducats: { fim: 160, eire: 0 },   // fim: old 30 Pieces of Silver (16) removed; eire skipped Exploration (Reinforcements)
     }
   ]
 };
