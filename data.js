@@ -28,7 +28,7 @@ window.CAMPAIGN = {
       patron: "Infernal Noble",
       color: "#9b2d6f",
       strongbox: 545,
-      glory: 5
+      glory: 11              // Bestial Skin Cloak (6) was never bought: refunded
     },
     {
       id: "eire",
