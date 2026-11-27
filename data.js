@@ -27,8 +27,8 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 545,   // +100 if the High-Ranking Captive is ransomed (option not picked yet)
-      glory: 1
+      strongbox: 545,
+      glory: 5
     },
     {
       id: "eire",
@@ -107,7 +107,7 @@ window.CAMPAIGN = {
       players: ["fim", "akuu20"],
       winner: "draw",   // agreed after the game: 6-8 on the table, but Undead Fortitude had been applied against FIRE
       vp: { fim: 6, akuu20: 8 },
-      glory: { fim: 1, akuu20: 1 },   // fim: Knighthood
+      glory: { fim: 5, akuu20: 1 },   // fim: Knighthood 1 + High-Ranking Captive executed 4
       xp: { fim: 4, akuu20: null },
       ducats: { fim: 290, akuu20: null },   // fim: Exploration 29 -> 25 High-Ranking Captive
     }
