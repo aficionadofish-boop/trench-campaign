@@ -27,8 +27,8 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 276,   // after paying game 4 treatments (20) in advance
-      glory: 0
+      strongbox: 545,   // +100 if the High-Ranking Captive is ransomed (option not picked yet)
+      glory: 1
     },
     {
       id: "eire",
@@ -44,11 +44,11 @@ window.CAMPAIGN = {
     },
     {
       id: "akuu20",
-      name: null,            // warband name not chosen yet
+      name: "Children of Gro-goroth",
       player: "Akuu20",
-      faction: null,
+      faction: "The Cult of the Black Grail",
       variant: null,
-      patron: null,
+      patron: "Anti-Pope of Avignon",
       color: "#d08a00",
       strongbox: null,
       glory: null
@@ -99,6 +99,17 @@ window.CAMPAIGN = {
       glory: { fim: 3, eire: 3 },   // eire: 3 deeds; no Knighthood Glory (Lieutenant taken Out of Action)
       xp: { fim: 7, eire: null },
       ducats: { fim: 160, eire: 0 },   // fim: Exploration 16 (Black Market); eire skipped Exploration (Reinforcements)
+    },
+    {
+      n: 4,
+      date: "2026-11-27",
+      scenario: "Armoured Train",
+      players: ["fim", "akuu20"],
+      winner: "draw",   // agreed after the game: 6-8 on the table, but Undead Fortitude had been applied against FIRE
+      vp: { fim: 6, akuu20: 8 },
+      glory: { fim: 1, akuu20: 1 },   // fim: Knighthood
+      xp: { fim: 4, akuu20: null },
+      ducats: { fim: 290, akuu20: null },   // fim: Exploration 29 -> 25 High-Ranking Captive
     }
   ]
 };
