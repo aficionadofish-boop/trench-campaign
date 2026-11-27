@@ -51,7 +51,7 @@ window.CAMPAIGN = {
       patron: "Anti-Pope of Avignon",
       color: "#d08a00",
       strongbox: null,
-      glory: null
+      glory: 1               // 14 start (8 + 6 latecomer catch-up), all spent on the list; +1 game 4
     },
     {
       id: "infernus",
