@@ -27,8 +27,8 @@ window.CAMPAIGN = {
       variant: "Silk Bed of Sloth",
       patron: "Infernal Noble",
       color: "#9b2d6f",
-      strongbox: 362,     // after buying the Desecrated Saint (183)
-      glory: 11              // Bestial Skin Cloak (6) was never bought: refunded
+      strongbox: 337,     // after the Desecrated Saint (183), Raining Blood (10) and the Scripture Guardian's Hellblade (15)
+      glory: 3               // 11 after game 4 - 7 Scripture Guardian - 1 Raining Blood (Bestial Skin Cloak was never bought)
     },
     {
       id: "eire",
