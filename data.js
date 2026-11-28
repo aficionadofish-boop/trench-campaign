@@ -40,7 +40,7 @@ window.CAMPAIGN = {
       xpNow: 9,              // XP on his roster after game 2 (per-game split unknown)
       color: "#2e7d32",
       strongbox: 0,          // called for Reinforcements after games 2 and 3
-      glory: 6               // 8 start - 4 Mamluk Faris - 4 Knighthood (bought after game 1), + games (deeds + Knighthood)
+      glory: 7               // 8 start - 4 Mamluk Faris - 4 Knighthood (bought after game 1), + games (deeds + Knighthood); +1 game 5
     },
     {
       id: "akuu20",
@@ -57,12 +57,12 @@ window.CAMPAIGN = {
       id: "infernus",
       name: null,
       player: "Infernus",
-      faction: null,
-      variant: null,
+      faction: "Heretic Legion",
+      variant: "Trench Ghosts",
       patron: null,
       color: "#5161b8",
       strongbox: null,
-      glory: null
+      glory: null            // 14 start (8 + 6 latecomer catch-up, like Akuu20) + 4 game 5; spending on the list not known
     }
   ],
 
@@ -110,6 +110,17 @@ window.CAMPAIGN = {
       glory: { fim: 5, akuu20: 1 },   // fim: Knighthood 1 + High-Ranking Captive executed 4
       xp: { fim: 4, akuu20: null },
       ducats: { fim: 290, akuu20: null },   // fim: Exploration 29 -> 25 High-Ranking Captive
+    },
+    {
+      n: 5,
+      date: "2026-11-28",
+      scenario: null,
+      players: ["infernus", "eire"],
+      winner: "infernus",
+      vp: { infernus: 9, eire: 6 },
+      glory: { infernus: 4, eire: 1 },
+      xp: { infernus: null, eire: null },
+      ducats: { infernus: null, eire: null },
     }
   ]
 };
